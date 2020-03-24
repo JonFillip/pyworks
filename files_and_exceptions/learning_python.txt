@@ -1,0 +1,15 @@
+I started learning about programming languages back in high school. I wanted to know more but the teacher handling the
+IT languages course wasn't all that great and made things seem too complicated. Then in 2018, once I was in university
+I picked up interest in programming again and began learning Python. I started with free courses in FreeCodeCamp on
+YouTube, then stopped for a while and bought books to help me understand concepts that aren't always explained in certain
+tutorials. I've learned stuff like:
+
+1. Python data structure and data types
+2. Variables and working with strings
+3. conditional statements
+4. Iterations, loops
+5. List, dictionary, sets
+6. Functions
+7. Classes
+8. Files
+9. Methods, imports and modules

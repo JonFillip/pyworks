@@ -1,0 +1,21 @@
+AI & BIG DATA
+Data, a string of numbers, letters and symbols, whatever its meaning or readability to any one person or industry data
+has become one of the most valuable commodities of the 21st century. Data makes knowledge,
+it helps government have an edge over it rivals, industries strive on data like never before it helps them study
+markets, customer base, company performance. In trading institutes like Wall Street data helps traders predict index
+and stock performance. Data is the cell block that drives economic and social growth in the breathes and works and data
+is only going to keep evolving even faster than any human can anticipate.
+With so much data floating around in the world it has become too large and complex to be analyzed by traditional data
+processing new ways to analyze and systematically extract information and deal with data sets gave birth to a new field
+known as Big data.
+Big data overwhelms businesses on day-to-day basis; data capturing, analysis, search, sharing, transfer, visualization,
+querying, information privacy and data sourcing are some of the challenges businesses are faced with when dealing with
+massive amount of data - structured and unstructured. But the importance of big data does not revolve with the amount of
+data one might have but how it is used. Data when analyzed properly help businesses reduce costs and time on research
+for new product development and optimized offerings, and aid in smarter decision making. When big data is combined with
+high-powered analytics and Artificial intelligence industries are able to solve complex tasks such as:
+● Detecting fraudulent behavior before it affects their organization
+● Studying consumer behavior forecasting and product recommendation
+● Personalize adverts and marketing messages
+● Derive optimal designs for devices and machines
+● Early detection and diagnosis of disease
