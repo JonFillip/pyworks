@@ -1,0 +1,28 @@
+  0           0            0           black
+255         255          255           white
+255           0            0             red
+  0         255            0           green
+  0           0          255            blue
+255         255            0          yellow
+  0         255          255            cyan
+255           0          255         magenta
+192         192          192          silver
+128         128          128            grey
+128           0            0          maroon
+128         128            0           olive
+  0         128            0      dark green
+128           0          128          purple
+  0         128          128            teal
+  0           0          128            navy
+139           0            0        dark red
+255         165            0          orange
+255         215            0            gold
+240         230          140           khaki
+154         205           50    yellow green
+135         206          235        sky blue
+0             0          139       dark blue
+148           0          211     dark violet
+238         130          238          violet
+218         112          214          orchid
+255         250          205  yellow chiffon
+255         250          205  yellow chiffon
