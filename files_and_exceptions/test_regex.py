@@ -5,7 +5,6 @@ def red_green_blue():
     """This function is to a regex list from the file rgb.txt"""
     filename = '/Users/johnphillip/Desktop/python_work/files_and_exceptions' \
                '/rgb.txt'
-    regex_list = []
     with open(filename, 'r+') as file_object:
         reader = file_object.readlines()
         file_object.seek(0)
