@@ -13,9 +13,9 @@ def red_green_blue():
                 file_object.write(line)
         file_object.truncate()
         n_reader = [re.sub(r'\s+', '\\t', line.strip()) for line in reader]
-        file_object.write(line)
-        file_object.truncate()
         print(n_reader)
+        for line in n_reader:
+            print(re.sub(r'\s+', '\\t', line.strip()))
 
 
 if __name__ == "__main__":

@@ -25,6 +25,3 @@
 238         130          238          violet
 218         112          214          orchid
 255         250          205  yellow chiffon
-255         250          205  yellow chiffon
-255         250          205  yellow chiffon
-255         250          205  yellow chiffon
