@@ -401,3 +401,28 @@ for username, user_info in users.items():
     print(f"\tFull name: {full_name.title()}")
     print(f"\tLocation: {location}")
     print(f"\tAge: {age}")
+    
+# The following code simulates a picnic and counts the number of distinct food items 
+# brought by the picnic goers
+
+picnic_guests = {
+    'Alice': {'apples': 5, 'pretzels': 12},
+    'John': {'beef steaks': 12, 'beer': 8},
+    'Ivan': {'chicken': 20, 'beer': 8},
+    'Dasha': {'Juice': 4, 'Doritos': 2}
+}
+
+def total_items(guests, item):
+    """Counts the number of unique items brought by the guests ands accumulates them"""
+    sum_items = 0
+    for guest, itinerary in guests.items():
+        sum_items += itinerary.get(item, 0)
+    return sum_items
+
+print("These are the sum of distinct food items brought to the picnic:")
+print(f"\t- Apples: {total_items(picnic_guests, 'apples')}")
+print(f"\t- Pretzels: {total_items(picnic_guests, 'pretzels')}")
+print(f"\t- Beef steaks: {total_items(picnic_guests, 'beef steaks')}")
+print(f"\t- Beer: {total_items(picnic_guests, 'beer')}")
+print(f"\t- Juice: {total_items(picnic_guests, 'Juice')}")
+print(f"\t- Chips: {total_items(picnic_guests, 'Doritos')}")

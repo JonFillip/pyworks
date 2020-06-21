@@ -192,7 +192,7 @@ class AfricanCity(Cities):
 
     def __init__(self, name, country, land_mass):
         """Initialize the attributes of the parent class
-         Then initialize attributes specific to AfricanCity"""
+        Then initialize attributes specific to AfricanCity"""
         super().__init__(name, country, land_mass)
         self.people = People(18000000, 1172)
 
