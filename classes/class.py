@@ -423,3 +423,124 @@ race_car.increment_speedometer(50)
 race_car.read_speedometer()
 
 
+# Simulating a class that allows for operations on fractions
+
+def gcd(m, n):
+    """Finds the greatest common divisor. AKA Euclid's algorithm"""
+    while m % n != 0:
+        oldm = m
+        oldn = n
+
+        m = oldn
+        n = oldm % oldn
+    return n
+
+
+class Fraction:
+    """Takes in a denominator and numerator and prints a fraction"""
+
+    def __init__(self, numerator, denominator):
+        self.num = numerator
+        self.dem = denominator
+
+    def is_integer_check(self):
+        """Validates that the numerator and denominator are integers"""
+        if isinstance(self.num, int):
+            return None
+        if isinstance(self.num, float):
+            raise ValueError(f"{self.num} not an integer")
+        if isinstance(self.num, str):
+            raise ValueError(f"{self.num} not an integer")
+
+        if isinstance(self.dem, float):
+            raise ValueError(f"{self.dem} not an integer.")
+        if isinstance(self.dem, str):
+            raise ValueError(f"{self.dem} not an integer.")
+
+    def __str__(self):
+        return f"{self.num}/{self.dem}"
+
+    def __add__(self, otherfraction):
+        new_num = self.num * otherfraction.dem + self.dem * otherfraction.num
+        new_dem = self.dem * otherfraction.dem
+        common = gcd(new_num, new_dem)
+        return Fraction(new_num // common, new_dem // common)
+
+    def __sub__(self, otherfraction):
+        new_num = self.num * otherfraction.dem - self.dem * otherfraction.num
+        new_dem = self.dem * otherfraction.dem
+        common = gcd(new_num, new_dem)
+        return Fraction(new_num // common, new_dem // common)
+
+    def __mul__(self, otherfraction):
+        new_num = self.num * otherfraction.num
+        new_dem = self.dem * otherfraction.dem
+        common = gcd(new_num, new_dem)
+        return Fraction(new_num // common, new_dem // common)
+
+    def __truediv__(self, otherfraction):
+        fraction_a = self.num * otherfraction.dem / self.dem * otherfraction.num
+        fraction_b = self.dem * otherfraction.dem
+        common = gcd(fraction_a, fraction_b)
+        return Fraction(fraction_a // common, fraction_b // common)
+
+    def __radd__(self, otherfraction):
+        if otherfraction == 0:
+            return Fraction(self.num, self.dem)
+        else:
+            return self.__add__(otherfraction)
+
+    def __iadd__(self, other):
+        new_num = self.num * other.dem + self.dem * other.num
+        new_den = self.dem * other.dem
+
+        common = Fraction.gcd(new_num, new_den)
+        self.num = new_num // common
+        self.den = new_den // common
+        return self
+
+    def __eq__(self, other):
+        first_num = self.num * other.dem
+        second_num = other.num * self.dem
+
+        return first_num == second_num
+
+    def __gt__(self, other):
+        fraction_a = self.num * other.dem
+        fraction_b = other.num * self.dem
+
+        if fraction_a > fraction_b:
+            return f"{fraction_a} is greater than {fraction_b}"
+
+    def __lt__(self, other):
+        fraction_a = self.num * other.dem
+        fraction_b = other.num * self.dem
+
+        if fraction_a < fraction_b:
+            return f"{fraction_a} is less than {fraction_b}"
+
+    def __ge__(self, other):
+        fraction_a = self.num * other.dem
+        fraction_b = other.num * self.dem
+
+        if fraction_a >= fraction_b:
+            return f"{fraction_a} is greater than or equal to {fraction_b}"
+
+    def __le__(self, other):
+        fraction_a = self.num * other.dem
+        fraction_b = other.num * self.dem
+
+        if fraction_a <= fraction_b:
+            return f"{fraction_a} is less than or equal to {fraction_b}"
+
+    def __ne__(self, other):
+        fraction_a = self.num * other.dem
+        fraction_b = other.num * self.dem
+
+        return fraction_a != fraction_b
+
+
+f1 = Fraction(2, 3)
+f2 = Fraction(2, 5)
+f3 = f1 + f2
+print(f3)
